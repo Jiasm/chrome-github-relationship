@@ -1,0 +1,11 @@
+{
+  "name": "Github Relationship",
+  "version": "0.0.1",
+  "description": "Make your relationship clearer",
+  "content_scripts": [{
+    "matches": ["*://*.github.com/*"],
+    "css": ["libs/relationship.css"],
+    "js": ["libs/relationship.js"]
+  }],
+  "manifest_version": 2
+}
