@@ -1,0 +1,163 @@
+body {
+  width: 300px;
+}
+
+header {
+  border-bottom: 1px solid rgb(225, 228, 232);
+  box-sizing: border-box;
+  color: rgb(36, 41, 46);
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  height: 45px;
+  line-height: 21px;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 8px;
+}
+
+header h1 {
+  box-sizing: border-box;
+  color: rgb(36, 41, 46);
+  display: block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 24px;
+  font-weight: 400;
+  height: 36px;
+  line-height: 36px;
+}
+
+.form-group {
+  box-sizing: border-box;
+  color: rgb(36, 41, 46);
+  display: block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  line-height: 21px;
+  margin: 15px 0;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.form-group dt {
+  line-height: 21px;
+  margin: 0 0 6px;
+}
+
+.form-group dt label {
+  font-weight: 600;
+}
+
+.form-group dd {
+  line-height: 21px;
+  margin-left: 0;
+}
+
+.form-group .form-control {
+  background-color: rgb(250, 251, 252);
+  background-position: 8px 50%;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  border: 1px solid rgb(209, 213, 218);
+  border-radius: 3px;
+  box-shadow: rgba(27, 31, 35, 0.075) 0 1px 2px 0 inset;
+  box-sizing: border-box;
+  color: rgb(36, 41, 46);
+  cursor: text;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  font-weight: 400;
+  height: 34px;
+  letter-spacing: normal;
+  line-height: 20px;
+  margin: 0 5px 0 0;
+  max-width: 100%;
+  min-height: 34px;
+  padding: 6px 8px;
+  vertical-align: middle;
+  width: 440px;
+  break-wordbody writing-mode: horizontal-tb;
+}
+
+.form-group .form-control:focus {
+  background-color: #fff;
+  border-color: #2188ff;
+  outline: none;
+  box-shadow: inset 0 1px 2px rgba(27,31,35,0.075), 0 0 0 0.2em rgba(3,102,214,0.3);
+}
+
+.button {
+  background-image: linear-gradient(-180deg, rgb(52, 208, 88) 0%, rgb(40, 167, 69) 90%);
+  background-position: -1px -1px;
+  background-size: 110% 110%;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  border: 1px solid rgba(27, 31, 35, 0.2);
+  border-radius: 3.5px;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  font-weight: 600;
+  height: 34px;
+  letter-spacing: normal;
+  line-height: 20px;
+  margin: 0;
+  padding: 6px 12px;
+  position: relative;
+  text-align: center;
+  text-decoration-color: rgb(255, 255, 255);
+  text-transform: none;
+  user-select: none;
+  vertical-align: middle;
+  word-wrap: break-word;
+  writing-mode: horizontal-tb;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+.button:hover {
+  background-color: #269f42;
+  background-image: linear-gradient(-180deg, #2fcb53 0%, #269f42 90%);
+  background-position: -.5em;
+  border-color: rgba(27,31,35,0.5);
+  text-decoration: none;
+  background-repeat: repeat-x;
+}
+
+.button.disabled {
+  color: rgba(255,255,255,0.75);
+  background-color: #94d3a2;
+  background-image: none;
+  border-color: rgba(27,31,35,0.2);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.tips {
+  box-sizing: border-box;
+  color: rgb(88, 96, 105);
+  display: block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 12px;
+  line-height: 18px;
+  margin: 4px 0 8px;
+  min-height: 17px;
+}
+
+footer {
+  margin-top: 30px;
+  color: rgb(88, 96, 105);
+  font-size: 12px;
+  text-align: center;
+}

@@ -9,8 +9,16 @@ async function test () {
     }
 
     let currentUser = meta.content
+    let token = await getToken()
 
-    let result = await fetch(`https://api.github.com/users/${currentUser}`)
+    if (!token) return console.log('has no token')
+
+    let result = await fetch(`https://api.github.com/users/${currentUser}`, {
+      credentials: 'same-origin',
+      headers: {
+        Authorization: token
+      }
+    })
     if (result.status === 200) {
       let data = await result.json()
 
@@ -22,3 +30,15 @@ async function test () {
 }
 
 test()
+
+function getToken () {
+  return new Promise((resolve, reject) => {
+    chrome.storage.local.get('github_auth_token', data => {
+      if (data.address) {
+        resolve(data.address)
+      } else {
+        resolve()
+      }
+    })
+  })
+}

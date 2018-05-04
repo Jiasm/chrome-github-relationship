@@ -3,12 +3,45 @@
 
 <head>
   <title>github info setting</title>
+  <link rel="stylesheet" href="/libs/popup.css">
 </head>
 
 <body>
-  <input id="username" />
-  <input id="password" type="password" />
-  <button id="submit">save</button>
+  <header>
+    <h1>Setting account</h1>
+  </header>
+  <main>
+    <section class="login-panel">
+      <dl class="form-group">
+        <dt>
+          <label for="account">Account</label>
+        </dt>
+        <dd>
+          <input class="form-control" type="text" id="account" />
+        </dd>
+      </dl>
+      <dl class="form-group">
+        <dt>
+          <label for="password">Password</label>
+        </dt>
+        <dd>
+          <input class="form-control" type="password" id="password" />
+        </dd>
+      </dl>
+      <section class="generate-token">
+        <button id="generate" class="button disabled">Generate</button>
+      </section>
+      <p class="tips">
+        Don't worry, it's just a local application.
+      </p>
+      <p class="tips">
+        Your account & password will be used for generate auth token.
+      </p>
+    </section>
+  </main>
+  <footer>
+    * May the force be with you *
+  </footer>
   <script src="libs/popup.js"></script>
 </body>
 

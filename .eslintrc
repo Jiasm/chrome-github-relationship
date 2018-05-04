@@ -2,3 +2,5 @@ extends: standard
 env:
   browser: true
   node: true
+globals:
+  chrome: false
