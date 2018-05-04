@@ -1,12 +1,14 @@
 async function test () {
   try {
-    let currentUser = document.querySelector('meta[name="octolytics-actor-login"]').content
+    let meta = document.querySelector('meta[name="octolytics-actor-login"]')
 
     // unlogin
     // do nothing
-    if (!currentUser) {
+    if (!meta) {
       return
     }
+
+    let currentUser = meta.content
 
     let result = await fetch(`https://api.github.com/users/${currentUser}`)
     if (result.status === 200) {
