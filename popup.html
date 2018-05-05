@@ -30,7 +30,7 @@
           <label for="account">Account</label>
         </dt>
         <dd>
-          <input class="form-control account" type="text" data-type="account" />
+          <input class="form-control account" type="text" data-field="account" data-type="password" />
         </dd>
       </dl>
       <dl class="form-group">
@@ -38,11 +38,12 @@
           <label for="password">Password</label>
         </dt>
         <dd>
-          <input class="form-control token" type="password" data-type="token" />
+          <input class="form-control token" type="password" data-field="token" data-type="password" />
         </dd>
       </dl>
       <section class="generate-token">
         <button class="button generate disabled" data-type="password">Generate</button>
+        <button class="button remove" data-type="password">Remove</button>
       </section>
       <p class="tips">
         Don't worry, it's just a local application.
@@ -60,7 +61,7 @@
           <label for="account">Account</label>
         </dt>
         <dd>
-          <input class="form-control account" type="text" data-type="account" />
+          <input class="form-control account" type="text" data-field="account" data-type="token" />
         </dd>
       </dl>
       <dl class="form-group">
@@ -68,11 +69,12 @@
           <label for="account">Token</label>
         </dt>
         <dd>
-          <input class="form-control token" type="text" data-type="token" />
+          <input class="form-control token" type="text" data-field="token" data-type="token" />
         </dd>
       </dl>
       <section class="generate-token">
         <button class="button generate disabled" data-type="token">Generate</button>
+        <button class="button remove" data-type="token">Remove</button>
       </section>
       <p class="tips">
         Don't worry, it's just a local application.
