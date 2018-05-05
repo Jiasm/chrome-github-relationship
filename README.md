@@ -11,7 +11,7 @@ a chrome extension, make your relationship clearer
 ### step 1
 
 download the `.crx`:  
-[chrome-github-relationship.crx](/dist/chrome-github-relationship.crx)
+[github-relationship.crx](/dist/github-relationship.crx)
 
 ### step2
 
