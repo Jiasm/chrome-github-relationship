@@ -5,7 +5,7 @@ a chrome extension, make your relationship clearer
 
 ## How to use
 
-**No authentication will be limited to the number of API requests**
+**No authentication will be limited to the number of API requests**  
 **That's a local extension, don't worry about you token or password**
 
 ### step 1

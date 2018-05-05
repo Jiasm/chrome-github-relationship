@@ -44,5 +44,5 @@
 
 ## TODO
 
-暂时只做了`profile`页面的`Followers`和`Folling`页面的处理。。
+暂时只做了`profile`页面的`Followers`和`Folling`页面的处理。。  
 后续会补充上其他页面。
