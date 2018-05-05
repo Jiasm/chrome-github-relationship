@@ -10,12 +10,15 @@ a chrome extension, make your relationship clearer
 
 ### step 1
 
-download the `.crx`:  
-[github-relationship.crx](/dist/github-relationship.crx)
+~~download the `.crx`:  
+[github-relationship.crx](/dist/github-relationship.crx)~~  
+Download the `zip` file ：  
+[github-relationship.zip](/dist/github-relationship.zip)
 
 ### step2
 
-drop to chrome, install it.
+~~drop to chrome, install it.~~  
+in `chrome://extensions/` page, open the `developer option`, import the unzip folder.
 
 ### step3
 
