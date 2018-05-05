@@ -1,4 +1,6 @@
 let current = {}
+let tabReg = /[?&]tab=(followers|following)/i
+let pageReg = /[?&]page=(\d+)/i
 
 async function main () {
   try {
@@ -32,9 +34,8 @@ async function main () {
 
     bindEvents()
 
-    let urlReg = /\?tab=(followers|following)/i
-    if (urlReg.test(location.search)) {
-      await tabStatusHandler(urlReg.exec(location.search)[1])
+    if (tabReg.test(location.search)) {
+      await tabStatusHandler(tabReg.exec(location.search)[1], (pageReg.exec(location.search) || [0, 1])[1])
     }
   } catch (e) {
     console.error(e)
@@ -44,21 +45,31 @@ async function main () {
 main()
 
 function bindEvents () {
-  let $followerNav = document.querySelector('.user-profile-nav a[title="Followers"]')
-  let $followingNav = document.querySelector('.user-profile-nav a[title="Following"]')
+  // let $followerNav = document.querySelector('.user-profile-nav a[title="Followers"]')
+  // let $followingNav = document.querySelector('.user-profile-nav a[title="Following"]')
 
-  addEvents([].concat($followerNav, $followingNav), 'click', tabStatusHandler)
+  // addEvents([].concat($followerNav, $followingNav), 'click', tabStatusHandler)
+
+  let target = document.body
+  let observer = new MutationObserver(tabStatusHandler.bind(this, {}))
+  let config = {childList: true}
+  observer.observe(target, config)
 }
 
-async function tabStatusHandler (e) {
-  let tabType
-  // trigger by self
-  if (typeof e === 'string') {
-    tabType = e
-  } else {
-    tabType = e.target.title
+async function tabStatusHandler ({tabType, tabPage = 1}) {
+  if (!tabReg.test(location.search)) return
+
+  if (!tabType) {
+    tabType = tabReg.exec(location.search)[1]
   }
 
+  if (!tabPage) {
+    tabPage = (pageReg.exec(location.search) || [0, 1])[1]
+  }
+
+  if (tabType === current.tab && tabPage === current.page) return
+  current.tab = tabType
+  current.page = tabPage
   tabType = tabType.toLowerCase()
 
   let $list = document.querySelectorAll('.position-relative>div.d-table')
@@ -79,13 +90,18 @@ async function tabStatusHandler (e) {
       })
       console.clear()
       if (result.status === 204) {
+        let $btn = item.querySelector(`.user-following-container .unfollow button.btn`)
         results[target] = true
         // you has follow him
-        // console.log(`you has follow ${target}`)
+        $btn.classList.add('btn-primary', 'complete')
+        $btn.innerHTML = 'Friend'
+        item.querySelector(`.user-following-container .follow button.btn`).classList.add('complete')
       } else if (result.status === 404) {
+        let $btn = item.querySelector(`.user-following-container .follow button.btn`)
         // you has not follow him
-        // console.log(`you has not follow ${target}`)
         results[target] = false
+        $btn.classList.add('complete')
+        item.querySelector(`.user-following-container .unfollow button.btn`).classList.add('complete')
       }
     } else if (tabType === 'following') {
       // your followling list
@@ -97,14 +113,18 @@ async function tabStatusHandler (e) {
       })
       console.clear()
       if (result.status === 204) {
+        let $btn = item.querySelector(`.user-following-container .unfollow button.btn`)
         // he has follow you
         results[target] = true
-        // console.log(`${target} has follow you`)
+        $btn.classList.add('btn-primary', 'complete')
+        $btn.innerHTML = 'Friend'
       } else if (result.status === 404) {
+        let $btn = item.querySelector(`.user-following-container .unfollow button.btn`)
         // he has not follow you
         results[target] = false
-        // console.log(`${target} has not follow you`)
+        $btn.classList.add('btn-danger', 'complete')
       }
+      item.querySelector(`.user-following-container .follow button.btn`).classList.add('complete')
     }
   }))
 
