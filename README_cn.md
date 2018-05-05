@@ -11,12 +11,16 @@
 
 ### 第一步
 
-下载`.crx`文件（没有双币信用卡。。。没法激活`chrome`开发者）:  
-[chrome-github-relationship.crx](/dist/chrome-github-relationship.crx)
+~~下载`.crx`文件（没有双币信用卡。。。没法激活`chrome`开发者）:  
+[chrome-github-relationship.crx](/dist/chrome-github-relationship.crx)~~  
+下载源码压缩包（新版Chrome禁止了非市场插件的安装）：  
+[github-relationship.zip](/dist/github-relationship.zip)
 
 ### 第二步
 
-拖拽到`chrome`中并安装
+~~拖拽到`chrome`中并安装~~  
+在扩展程序页面打开开发者模式，点击加载已解压的扩展程序，选择`.zip`解压后的目录即可完成安装*（我一定要办一张双币信用卡开通Chrome开发者账号）*
+
 
 ### 第三步
 
