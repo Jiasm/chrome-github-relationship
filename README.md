@@ -29,7 +29,8 @@ input your `token` or `password`.
 3. Developer settings
 4. Personal access tokens
 5. Select `user` scopes
-6. Copy your token to `popup`
+6. Generate token
+7. Copy your token to `popup`
 
 ### step4
 

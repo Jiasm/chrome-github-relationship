@@ -30,7 +30,8 @@
 3. 点击`Developer settings`
 4. 点击`Personal access tokens`
 5. 仅选择`user`对应的`scopes`即可
-6. 复制`token`到`popup`页面中
+6. 生成`token`
+7. 复制`token`到`popup`页面中
 
 ### 第四步
 
