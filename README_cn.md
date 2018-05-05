@@ -46,3 +46,8 @@
 
 暂时只做了`profile`页面的`Followers`和`Folling`页面的处理。。  
 后续会补充上其他页面。
+
+## Reference
+
+1. [GitHub API](https://developer.github.com/v3/users/followers/#check-if-you-are-following-a-user)
+2. [Chrome Developer](https://developer.chrome.com/extensions/getstarted)

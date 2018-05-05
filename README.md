@@ -45,3 +45,8 @@ Browse GitHub as usual
 
 others page supports  
 only `Followers` and `Folling` for now.
+
+## Reference
+
+1. [GitHub API](https://developer.github.com/v3/users/followers/#check-if-you-are-following-a-user)
+2. [Chrome Developer](https://developer.chrome.com/extensions/getstarted)
