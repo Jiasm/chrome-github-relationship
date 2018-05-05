@@ -140,9 +140,9 @@ async function tabStatusHandler ({tabType, tabPage = 1}) {
 /**
  * a jquery like event listener
  */
-function addEvents (tags, event, handler) {
-  tags.forEach(tag => tag && event && handler && tag.addEventListener(event, handler))
-}
+// function addEvents (tags, event, handler) {
+//   tags.forEach(tag => tag && event && handler && tag.addEventListener(event, handler))
+// }
 
 async function getStorage (key) {
   return new Promise((resolve, reject) => {

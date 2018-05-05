@@ -110,8 +110,6 @@ function keyupHandler (e) {
 
   formData[cursorPanel][target.dataset.field] = target.value
 
-  console.log(formData)
-
   changeButtonStatus()
 }
 
