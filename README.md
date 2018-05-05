@@ -16,7 +16,7 @@ drop to chrome, install it.
 
 ### step3
 
-input your token or password.
+input your token or password.  
 ![](/dist/example.png)
 
 #### how to create a personal access token
