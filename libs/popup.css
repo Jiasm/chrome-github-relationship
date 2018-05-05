@@ -1,8 +1,90 @@
 body {
   width: 300px;
+  margin: 0;
 }
 
-header {
+.nav-wrap {
+  background-color: rgb(250, 251, 252);
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.nav-title {
+  padding-left: 10px;
+}
+
+.nav-title {
+  padding: 7px 0 8px 10px;
+}
+
+.nav-title h2 {
+  box-sizing: border-box;
+  color: rgb(3, 102, 214);
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+  text-decoration-color: rgb(3, 102, 214);
+  text-decoration-style: solid;
+  margin: 0;
+}
+
+.nav {
+  box-sizing: border-box;
+  color: rgb(36, 41, 46);
+  display: block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  height: 40px;
+  line-height: 21px;
+  padding-left: 10px;
+  position: relative;
+  top: 1px;
+  word-wrap: break-word;
+  width: 100%;
+}
+
+.nav-item {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-top-width: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  box-sizing: border-box;
+  color: rgb(88, 96, 105);
+  cursor: pointer;
+  display: block;
+  float: left;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  height: 40px;
+  line-height: 21px;
+  padding: 7px 15px 8px;
+  text-decoration-color: rgb(88, 96, 105);
+  text-decoration-line: none;
+  text-decoration-style: solid;
+}
+
+.nav-item.selected {
+  color: #24292e;
+  background-color: #fff;
+  border-color: #e36209 #e1e4e8 transparent;
+}
+
+.form-panel {
+  padding: 0 10px;
+  display: none;
+}
+
+.form-panel.active {
+  display: block;
+}
+
+.form-panel header {
   border-bottom: 1px solid rgb(225, 228, 232);
   box-sizing: border-box;
   color: rgb(36, 41, 46);
@@ -17,7 +99,7 @@ header {
   padding-bottom: 8px;
 }
 
-header h1 {
+.form-panel header h3 {
   box-sizing: border-box;
   color: rgb(36, 41, 46);
   display: block;

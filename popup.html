@@ -7,17 +7,30 @@
 </head>
 
 <body>
-  <header>
-    <h1>Setting account</h1>
-  </header>
   <main>
-    <section class="login-panel">
+    <section class="nav-wrap">
+      <header class="nav-title">
+        <h2>Generate token</h2>
+      </header>
+      <nav class="nav">
+        <a class="selected nav-item" data-type="token">
+          Token
+        </a>
+        <a class="nav-item" data-type="password">
+          Password
+        </a>
+      </nav>
+    </section>
+    <section class="login-panel form-panel" data-type="password">
+      <header>
+        <h3>Setting password</h3>
+      </header>
       <dl class="form-group">
         <dt>
           <label for="account">Account</label>
         </dt>
         <dd>
-          <input class="form-control" type="text" id="account" />
+          <input class="form-control account" type="text" data-type="account" />
         </dd>
       </dl>
       <dl class="form-group">
@@ -25,17 +38,47 @@
           <label for="password">Password</label>
         </dt>
         <dd>
-          <input class="form-control" type="password" id="password" />
+          <input class="form-control token" type="password" data-type="token" />
         </dd>
       </dl>
       <section class="generate-token">
-        <button id="generate" class="button disabled">Generate</button>
+        <button class="button generate disabled" data-type="password">Generate</button>
       </section>
       <p class="tips">
         Don't worry, it's just a local application.
       </p>
       <p class="tips">
         Your account & password will be used for generate auth token.
+      </p>
+    </section>
+    <section class="token-panel form-panel" data-type="token">
+      <header>
+        <h3>Setting token</h3>
+      </header>
+      <dl class="form-group">
+        <dt>
+          <label for="account">Account</label>
+        </dt>
+        <dd>
+          <input class="form-control account" type="text" data-type="account" />
+        </dd>
+      </dl>
+      <dl class="form-group">
+        <dt>
+          <label for="account">Token</label>
+        </dt>
+        <dd>
+          <input class="form-control token" type="text" data-type="token" />
+        </dd>
+      </dl>
+      <section class="generate-token">
+        <button class="button generate disabled" data-type="token">Generate</button>
+      </section>
+      <p class="tips">
+        Don't worry, it's just a local application.
+      </p>
+      <p class="tips">
+        Your account & token will be used for generate auth token.
       </p>
     </section>
   </main>
