@@ -31,12 +31,17 @@ input your `token` or `password`.
 5. Select `user` scopes
 6. Copy your token to `popup`
 
-### step5
+### step4
 
 Click `Generate`, set to `chrome.storage.local`, a static value.
 
-### step4
+### step5
 
 Browse GitHub as usual
 
 ![](/dist/example.gif)
+
+## TODO
+
+others page supports  
+only `Followers` and `Folling` for now.
